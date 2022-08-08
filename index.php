@@ -1,11 +1,9 @@
 <?php
-// Create a blank image and add some text
-header('Content-Type: image/webp');
 
-$im = imagecreatefromjpeg("images/unity.jpg");
+    require 'vendor/autoload.php';
 
-// Save the image
-imagewebp($im);
+    require 'src/App.php';
 
-// Free up memory
-imagedestroy($im);
+    $app = new \Zaghrat\ConvertImages\App();
+
+    $app->start();

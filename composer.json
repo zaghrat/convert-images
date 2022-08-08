@@ -1,0 +1,19 @@
+{
+    "name": "zaghrat/convert-images",
+    "description": "Convert png/jpeg images to webp format",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Zaghrat\\ConvertImages\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ahmed Zaghrat",
+            "email": "zaghrat.ahmed@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-gd": "*"
+    }
+}
