@@ -15,6 +15,6 @@
     ],
     "require": {
         "ext-gd": "*",
-        "ext-http": "*"
+        "php": ">=8.1"
     }
 }
