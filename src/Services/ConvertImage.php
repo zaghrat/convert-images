@@ -4,7 +4,7 @@ namespace Zaghrat\ConvertImages\Services;
 
 class ConvertImage
 {
-    private const WORKING_DIR =  '/var/tmp/';
+    private const WORKING_DIR =  'images/';
 
     public function convertJpegToWebp($input, $quality): string
     {

@@ -4,7 +4,7 @@ namespace Zaghrat\ConvertImages\Services;
 
 class ImageStorage
 {
-    private const OUTPUT_DIR =  '/var/tmp/';
+    private const OUTPUT_DIR =  'images/';
 
     public function uploadImage(array $file): string
     {
