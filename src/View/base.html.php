@@ -14,6 +14,11 @@
             <?php
                 require $page;
             ?>
+            <div class="row" style="padding-top: 5%;">
+                <div class="col">
+                    You can check the code on <a href="https://github.com/zaghrat/convert-images">GitHub</a>
+                </div>
+            </div>
         </div>
     </body>
 </html>
