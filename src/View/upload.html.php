@@ -24,15 +24,21 @@ if (isset($error)) {
 }
 ?>
 
-
-<h1>Convert Images to webp</h1>
-<form action="" method="POST", enctype="multipart/form-data">
-    <div class="mb-3">
-        <label for="fileToUpload" class="form-label">Upload Image to convert</label>
-        <input class="form-control" type="file" id="fileToUpload" name="fileToUpload" accept="image/png, image/jpeg" required>
-        <label for="quality" class="form-label">Quality (0 - 100)</label>
-        <input class="form-control" type="number" id="quality" name="quality" value="50" step="1", min="0", max="100" required>
+<div class="col text-center">
+    <div class="card">
+        <div class="card-body">
+            <h1>Convert Images to webp</h1>
+            <form action="" method="POST", enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="fileToUpload" class="form-label">Upload Image to convert</label>
+                    <input class="form-control" type="file" id="fileToUpload" name="fileToUpload" accept="image/png, image/jpeg" required>
+                    <label for="quality" class="form-label">Quality (0 - 100)</label>
+                    <input class="form-control" type="number" id="quality" name="quality" value="50" step="1", min="0", max="100" required>
+                </div>
+                <br>
+                <input class="btn btn-primary" type="submit" value="Upload">
+            </form>
+        </div>
     </div>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Upload">
-</form>
+</div>
+

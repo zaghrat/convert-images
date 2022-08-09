@@ -16,8 +16,8 @@
 </div>
 <div class="row">
     <div class="col text-center">
-        <a href=".">
-            <input type="submit" class="btn btn-primary" value="Convert another image"></input>
-        </a>
+        <?php
+            require 'upload.html.php';
+        ?>
     </div>
 </div>
