@@ -1,2 +1,4 @@
 .idea
 /vendor/
+images/*
+log/error_log.txt
