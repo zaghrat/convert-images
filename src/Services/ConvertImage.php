@@ -4,22 +4,33 @@ namespace Zaghrat\ConvertImages\Services;
 
 class ConvertImage
 {
-    public function convertJpegToWebp(): void
+    private const WORKING_DIR =  '/var/tmp/';
+
+    public function convertJpegToWebp($input, $quality): string
     {
-        header('Content-Type: image/webp');
+        $filename = md5(rand()) . '.webp';
+        $output = self::WORKING_DIR . $filename;
 
-        $im = imagecreatefromjpeg('/var/www/html/convert-images/images/unity.jpg');
-
-        $length = imagesx($im);
-        $height = imagesy($im);
-
-        $text_color = imagecolorallocate($im,  rand(0, 255),  rand(0, 255), rand(0, 255));
-
-        imagestring($im, 5,$length - 200 , $height - rand(100, 200),  'WebP with PHP', $text_color);
-
-        imagewebp($im, null, 100);
-
+        $im = imagecreatefromjpeg(self::WORKING_DIR . $input);
+        imagewebp($im, $output, $quality);
         imagedestroy($im);
 
+        return $filename;
+    }
+
+    public function convertPngToWebp($input, $quality): string
+    {
+        $filename = md5(rand()) . '.webp';
+        $output = self::WORKING_DIR . $filename;
+
+        $im = imagecreatefrompng(self::WORKING_DIR . $input);
+        imagepalettetotruecolor($im);
+        imagealphablending($im, true);
+        imagesavealpha($im, true);
+
+        imagewebp($im, $output, $quality);
+        imagedestroy($im);
+
+        return $filename;
     }
 }
